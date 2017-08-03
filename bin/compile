@@ -16,10 +16,10 @@
 set -eo pipefail
 
 # Do a couple things an article told me to do, no clue what I'm doing
-printf "we're doing it... NOW!!!"
-ORIG_BUILD_DIR=BUILD_DIR
+printf "setup a symlink"
+ORIG_BUILD_DIR=$BUILD_DIR
+printf $ORIG_BUILD_DIR
 ln -s $ORIG_BUILD_DIR/.apt /app/.apt
-printf BUILD_DIR
 
 # Standard Library.
 export BPLOG_PREFIX="buildpack.python"

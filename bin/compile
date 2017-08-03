@@ -16,9 +16,9 @@
 set -eo pipefail
 
 # Do a couple things an article told me to do, no clue what I'm doing
-printf "setup a symlink"
+echo "setup a symlink"
 ORIG_BUILD_DIR=$BUILD_DIR
-printf $ORIG_BUILD_DIR
+echo $ORIG_BUILD_DIR
 ln -s $ORIG_BUILD_DIR/.apt /app/.apt
 
 # Standard Library.
@@ -242,7 +242,7 @@ if [[ -d .heroku/src ]]; then
   cp -R .heroku/src $CACHE_DIR/.heroku/ &> /dev/null || true
 fi
 
-printf "remove symlink"
+echo "remove symlink"
 rm /app/.apt
 
 # Measure the size of the Python installation.

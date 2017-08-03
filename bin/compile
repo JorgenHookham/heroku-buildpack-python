@@ -242,5 +242,8 @@ if [[ -d .heroku/src ]]; then
   cp -R .heroku/src $CACHE_DIR/.heroku/ &> /dev/null || true
 fi
 
+printf "remove symlink"
+rm /app/.apt
+
 # Measure the size of the Python installation.
 mmeasure 'python.size' "$(measure-size)"
